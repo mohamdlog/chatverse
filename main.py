@@ -1,8 +1,14 @@
-# -*- coding: cp1252 -*-
+# coding: cp1252
 
 
 system = input("Are you using Windows or Linux?\n").lower()
+
 if system == 'windows':
+    print("""
+        Note: boost libraries can be downloaded 
+              from https://www.boost.org/users/download/
+              developer command prompt is included with Visual Studio
+        """)
     boost = input((r'Enter path to boost (i.e., C:\boost_1_81_0)') + '\n')
     project = input((r'Enter path to chatverse (i.e., C:\Users\name\Desktop\chatverse)') + '\n')
     print(f"""  
@@ -13,11 +19,12 @@ if system == 'windows':
         5. Type "cl /EHsc /I {boost} {project}\client.cpp"
         6. Type "client"
         """)
+
 elif system == 'linux':
     print("""
         Note: libboost and g++ can be downloaded with
-        sudo apt-get install libboost-all-dev 
-        sudo apt-get install g++
+              sudo apt-get install libboost-all-dev 
+              sudo apt-get install g++
         """)
     print("""
         1. Open command prompt
