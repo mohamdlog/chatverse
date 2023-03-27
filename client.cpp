@@ -9,12 +9,10 @@ using std::endl;
 
 int main() {
     boost::asio::io_service io_service;
-
     tcp::socket socket(io_service);
-
     socket.connect(tcp::endpoint(boost::asio::ip::address::from_string("127.0.0.1"), 1234));
-
     const string msg = "Hello from Client!\n";
+
     boost::system::error_code error;
     boost::asio::write(socket, boost::asio::buffer(msg), error);
     if (!error) {
