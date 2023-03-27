@@ -1,7 +1,8 @@
 # chatverse
 
 **Requirements:**   
-boost::asio
+Windows: boost::asio, developer command prompt  
+Linux: libboost, g++
 
 **Features:**  
 Connectivity, Portability 
