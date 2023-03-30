@@ -8,4 +8,4 @@ Linux: libboost, g++
 Server/Client Communication
 
 **In-Progress:**  
-Asynchronous Chat
+Asynchronous chat
