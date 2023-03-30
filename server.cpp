@@ -5,6 +5,7 @@ using namespace boost::asio;
 using ip::tcp;
 using std::string;
 using std::cout;
+using std::cin;
 using std::endl;
 
 string read_(tcp::socket& socket) {
@@ -20,6 +21,9 @@ void send_(tcp::socket& socket, const string& message) {
 }
 
 int main() {
+    string note;
+    cout << "Hello, send a message: ";
+    cin >> note;
     boost::asio::io_service io_service;
     tcp::acceptor acceptor_(io_service, tcp::endpoint(tcp::v4(), 1234));
     tcp::socket socket_(io_service);
@@ -29,6 +33,5 @@ int main() {
 
     cout << message << endl;
 
-    send_(socket_, "Hello From Server!");
-    cout << "Servent sent Hello message to Client!" << endl;
+    send_(socket_, note);
 }
