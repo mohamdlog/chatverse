@@ -1,7 +1,7 @@
 # coding: cp1252
 import subprocess
 
-
+print("Hello, welcome to chatverse.\n")
 system = input("Are you using Windows or Linux?\n").lower()
 
 if system == 'windows':
@@ -16,9 +16,11 @@ if system == 'windows':
         1. Open developer command prompt
         2. Type "cl /EHsc /I {boost} {project}\server.cpp"
         3. Type "server"
-        4. Open a second developer command prompt
-        5. Type "cl /EHsc /I {boost} {project}\client.cpp"
-        6. Type "client"
+        4. Send a message
+        5. Open a second developer command prompt
+        6. Type "cl /EHsc /I {boost} {project}\client.cpp"
+        7. Type "client"
+        8. Enjoy
         """)
     input("Exit? ")
 
@@ -30,7 +32,7 @@ elif system == 'linux':
     boost = input((r'Enter path to boost (i.e., /home/name/boost_1_81_0)') + '\n')
     comp = input(("Enter preferred compiler (i.e., g++ || c++)") + '\n')
     print(f"""
-       After typing your message to the client:
+      After typing your message to the client:
         1. Open a second terminal 
         2. Navigate to chatverse-main
         3. Type "{comp} -I {boost} client.cpp -o client; ./client"
