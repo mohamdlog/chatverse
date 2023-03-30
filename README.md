@@ -5,7 +5,7 @@ Windows: boost::asio, developer command prompt
 Linux: libboost, g++
 
 **Features:**  
-Connectivity, Portability 
+Server/Client Communication
 
 **In-Progress:**  
 Asynchronous Chat
