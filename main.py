@@ -1,4 +1,5 @@
 # coding: cp1252
+import subprocess
 
 
 system = input("Are you using Windows or Linux?\n").lower()
@@ -10,7 +11,7 @@ if system == 'windows':
               developer command prompt is included with Visual Studio
         """)
     boost = input((r'Enter path to boost (i.e., C:\boost_1_81_0)') + '\n')
-    project = input((r'Enter path to chatverse (i.e., C:\Users\name\Desktop\chatverse)') + '\n')
+    project = input((r'Enter path to chatverse (i.e., C:\Users\name\Downloads\chatverse-main)') + '\n')
     print(f"""  
         1. Open developer command prompt
         2. Type "cl /EHsc /I {boost} {project}\server.cpp"
@@ -23,16 +24,16 @@ if system == 'windows':
 
 elif system == 'linux':
     print("""
-        Note: libboost and g++ can be downloaded with
-              sudo apt install libboost-all-dev 
-              sudo apt install g++
+        Note: boost libraries can be downloaded 
+              from https://www.boost.org/users/download/
         """)
-    print("""
-        1. Open a terminal
-        2. Type "g++ server.cpp -o server –lboost_system"
-        3. Type "./server"
-        4. Open a second terminal
-        5. Type "g++ client.cpp -o client –lboost_system"
-        6. Type "./client"
+    boost = input((r'Enter path to boost (i.e., /home/name/boost_1_81_0)') + '\n')
+    comp = input(("Enter preferred compiler (i.e., g++ || c++)") + '\n')
+    print(f"""
+       After typing your message to the client:
+        1. Open a second terminal 
+        2. Navigate to chatverse-main
+        3. Type "{comp} -I {boost} client.cpp -o client; ./client
+        4. Enjoy
         """)
-    input("Exit? ")
+    subprocess.run(f'{comp} -I {boost} server.cpp -o server; ./server', shell = True)
