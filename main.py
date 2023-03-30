@@ -33,7 +33,7 @@ elif system == 'linux':
        After typing your message to the client:
         1. Open a second terminal 
         2. Navigate to chatverse-main
-        3. Type "{comp} -I {boost} client.cpp -o client; ./client
+        3. Type "{comp} -I {boost} client.cpp -o client; ./client"
         4. Enjoy
         """)
     subprocess.run(f'{comp} -I {boost} server.cpp -o server; ./server', shell = True)
