@@ -11,12 +11,12 @@ int main() {
     boost::asio::io_service io_service;
     tcp::socket socket(io_service);
     socket.connect(tcp::endpoint(boost::asio::ip::address::from_string("127.0.0.1"), 1234));
-    const string msg = "Hello from Client!\n";
+    const string msg = "Client has received your message!\n";
 
     boost::system::error_code error;
     boost::asio::write(socket, boost::asio::buffer(msg), error);
     if (!error) {
-        cout << "Client sent a message!" << endl;
+        cout << "Client sent a message:" << endl;
     }
     else {
         cout << "send failed: " << error.message() << endl;
