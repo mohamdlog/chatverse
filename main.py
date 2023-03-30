@@ -24,8 +24,8 @@ if system == 'windows':
 elif system == 'linux':
     print("""
         Note: libboost and g++ can be downloaded with
-              sudo apt-get install libboost-all-dev 
-              sudo apt-get install g++
+              sudo apt install libboost-all-dev 
+              sudo apt install g++
         """)
     print("""
         1. Open a terminal
