@@ -19,6 +19,7 @@ if system == 'windows':
         5. Type "cl /EHsc /I {boost} {project}\client.cpp"
         6. Type "client"
         """)
+    input("Exit? ")
 
 elif system == 'linux':
     print("""
@@ -34,3 +35,4 @@ elif system == 'linux':
         5. Type "g++ client.cpp -o client –lboost_system"
         6. Type "./client"
         """)
+    input("Exit? ")
