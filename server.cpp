@@ -22,7 +22,7 @@ void send_(tcp::socket& socket, const string& message) {
 
 int main() {
     string note;
-    cout << "Hello, send a message: ";
+    cout << "Send a message to client: ";
     cin >> note;
     boost::asio::io_service io_service;
     tcp::acceptor acceptor_(io_service, tcp::endpoint(tcp::v4(), 1234));
