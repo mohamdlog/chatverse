@@ -28,10 +28,10 @@ elif system == 'linux':
               sudo apt-get install g++
         """)
     print("""
-        1. Open command prompt
+        1. Open a terminal
         2. Type "g++ server.cpp -o server –lboost_system"
         3. Type "./server"
-        4. Open a second command prompt
+        4. Open a second terminal
         5. Type "g++ client.cpp -o client –lboost_system"
         6. Type "./client"
         """)
