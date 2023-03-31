@@ -20,7 +20,6 @@ if system == 'windows':
         5. Open a second developer command prompt
         6. Type "cl /EHsc /I {boost} {project}\client.cpp"
         7. Type "client"
-        8. Enjoy
         """)
     input("Exit? ")
 
@@ -36,6 +35,5 @@ elif system == 'linux':
         1. Open a second terminal 
         2. Navigate to chatverse-main
         3. Type "{comp} -I {boost} client.cpp -o client; ./client"
-        4. Enjoy
         """)
     subprocess.run(f'{comp} -I {boost} server.cpp -o server; ./server', shell = True)
