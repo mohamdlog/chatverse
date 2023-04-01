@@ -1,7 +1,7 @@
 # coding: cp1252
 import subprocess
 
-print("Hello, welcome to chatverse.\n")
+
 system = input("Are you using Windows or Linux?\n").lower()
 
 if system == 'windows':
